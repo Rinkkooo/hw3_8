@@ -2,10 +2,8 @@ package com.example.hw3_8
 
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw3_8.databinding.ItemCharCardsBinding
 
@@ -28,13 +26,6 @@ class CardsAdapter(private val cardList: List<Card>, private val onClickListener
         }
 
     }
-
-    private fun onClickListener() {
-        Log.d("CardsFragment", "FrameLayout clicked!")
-        val selectedCard = cardList.firstOrNull()
-        val bundle = bundleOf("selectedCard" to selectedCard)
-    }
-
 }
 
 class ViewHolder(private val binding: ItemCharCardsBinding) :
